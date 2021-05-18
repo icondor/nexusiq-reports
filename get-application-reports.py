@@ -18,6 +18,7 @@ reportsDb = []
 def getApplicationEvaluationReports():
   statusCode, applicationEvaluations = iq.getData('/api/v2/reports/applications')
 
+  print(statusCode)
   if statusCode == 200:
     fileIO.writeJsonFile(appReportsJsonFile, applicationEvaluations)
     print(appReportsJsonFile)
